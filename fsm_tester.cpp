@@ -25,7 +25,7 @@ int choose_test()
 		printf("Construct DFA which accepts binary string whose prefix or suffix is 01\n");
 		break;
 	case 5:
-		printf("Let L be the set of all strings with an equal number of 0¡¯s and 1¡¯s such that no prefix has two more 0¡¯s than 1¡¯s nor two more 1¡¯s than 0¡¯s\n");
+		printf("Let L be the set of all strings with an equal number of 0ï¿½ï¿½s and 1ï¿½ï¿½s such that no prefix has two more 0ï¿½ï¿½s than 1ï¿½ï¿½s nor two more 1ï¿½ï¿½s than 0ï¿½ï¿½s\n");
 		break;
 	default: break;
 	}
@@ -67,6 +67,7 @@ int test_fsm(int number)
 	while (!feof(test_case))
 	{
 		index = 0;
+		set_state();
 
 		fgets(current, 100, test_case);
 		while (current[index] != NULL)
@@ -206,7 +207,7 @@ void problem_4(bool *test)
 void problem_5(bool *test)
 {
 	int num = 0;
-	bool testcase_5[11] = { 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 };
+	bool testcase_5[11] = { 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 };
 	for (int i = 0; i < 10; i++)
 	{
 		if (test[i] == testcase_5[i])

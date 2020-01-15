@@ -8,6 +8,7 @@
 #include <string.h>
 
 bool fsm_skeleton(char current);
+void set_state();
 int choose_test();
 int test_fsm(int number);
 void problem_1(bool *test);
